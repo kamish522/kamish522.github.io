@@ -1,0 +1,67 @@
+#headerll { text-align: center; margin: 50px auto; width: fit-content; }
+#team-container { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+  
+.team-member {
+    width: 20%;
+    min-width: 20px;
+    margin: 20px;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.avatar-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, black 20%, #222);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 3px #333333;
+}
+  
+.avatar { max-width: 100%; max-height: 100%; border-radius: 50%; }
+.nickname { font-weight: bold; text-align: center; margin-bottom: 10px; }
+.tags { list-style: none; padding: 0; text-align: center; }
+.slick-slide { margin: 0 10px; }
+.slick-track{ display: flex; }
+.slick-dots{ text-align: center; margin-top: 20px; }
+.slick-dots li button:before{ color: black; }
+  
+.tags li {
+    display: inline-block;
+    margin: 3px;
+    padding: 3px 7px;
+    color: rgb(0, 0, 0);
+    background-color: #facc15;
+    border-radius: 5px;
+}
+footer#footer{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+.footer-text{
+    margin: 0 auto; 
+    max-width: 800px;
+    padding: 10px;
+}
+
+.footer-text a{
+    color:white;
+    text-decoration: none;
+}
