@@ -2,20 +2,29 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="image" content="https://kamish.pro/Img/Logo.png">
-  <meta name="theme-color" content='#0c0c0c'><meta property="locale" content="ru_RU">
-  <title>Kamish - Игровой бот</title><script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <title>Kamish - Игровой бот</title>
+  <meta property="locale" content="ru_RU">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content='#0c0c0c'>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://kamish.pro/files/CND/Icon.png">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./files/main.css">
+  <script src="./files/main.js"></script>
+
+  <meta property="og:image" content="./files/CND/Icon.png">
   <meta name="description" content="Kamish — игровой и милый ботик который украсит ваш сервер ❄️">
   <meta property="og:description" content="Kamish — игровой и милый ботик который украсит ваш сервер ❄️">
-  <meta property="og:locale" content="ru_RU"><meta property="og:image" content="https://kamish.pro/Img/Logo.png">
-  <meta name="keywords" content="kamish, KAMISH, kamish bot, discord, discord bot, kamish website, bot, app, kash">
-  <meta property="og:type" content="website"><meta property="og:url" content="https://kamish.pro"><meta property="og:title" content="Kamish">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script><script> tailwind.config = {theme:{extend:{colors:{primary: '#FCD34D'},},},}</script>
-    
+  <meta name="keywords" content="kamish, KAMISH, kamish bot, discord, discord bot, kamish website, bot, app, kash, game, game bot">
+  
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#FCD34D' }, }, }, }</script>
+  
   <style> @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
     .bg-noise { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E"); }
@@ -35,10 +44,10 @@
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
    ym(99322670, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/99322670" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
@@ -52,9 +61,9 @@
         <nav class="hidden md:flex items-center space-x-8">
           <a href="/" class="text-sm font-medium hover:text-yellow-400 transition-colors">ГЛАВНАЯ</a>
           <a href="/docs" class="text-sm font-medium hover:text-yellow-400 transition-colors">ДОКУМЕНТАЦИЯ</a>
-          <a href="/discord" class="text-sm font-medium hover:text-yellow-400 transition-colors">ДИСКОРД</a>
+          <a href="https://discord.gg/kamish" target="_blank" class="text-sm font-medium hover:text-yellow-400 transition-colors">ДИСКОРД</a>
           <a href="/help" class="text-sm font-medium hover:text-yellow-400 transition-colors">ПОМОЧЬ ПРОЕКТУ</a>
-        </nav><button class="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded-md text-sm font-medium transition-colors" onclick="window.open('https://discord.com/oauth2/authorize?client_id=1066975258206294096', '_blank')">Добавить</button>
+        </nav><button class="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded-md text-sm font-medium transition-colors" id='button-link-invite'>Добавить</button>
       </div></div>
   </header>
 
@@ -64,18 +73,47 @@
         <span class="bg-gradient-to-r from-white to-yellow-400 bg-clip-text text-transparent">Множество интересных игр сделаных <span class="text-yellow-400">для вас</span> &lt;3</span>
       </h1><p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">Kamish — игровой бот, который добавляет много игр на ваш сервер. Вы можете просто играть или сражаться за первое место в таблице лидеров.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <button class="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-md text-lg font-medium transition-colors">Начать использовать</button>
-          <button class="border border-yellow-400/20 hover:bg-yellow-400/10 px-6 py-3 rounded-md text-lg font-medium transition-colors">Подробнее</button>
+          <button class="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-md text-lg font-medium transition-colors" id="button-link-invite">Начать использовать</button>
+          <button class="border border-yellow-400/20 hover:bg-yellow-400/10 px-6 py-3 rounded-md text-lg font-medium transition-colors" id="button-link-docs">Подробнее</button>
         </div>
       </div><div class="flex-1 relative scale-95" id="hero-image">
         <div class="relative w-full aspect-square max-w-md mx-auto">
           <div class="absolute inset-0 bg-gradient-to-r from-yellow-400/30 to-purple-600/30 rounded-full blur-3xl"></div>
           <div class="relative z-10 w-full h-full" id="hero-blob">
-            <img src="https://cdn.glitch.global/512b4305-e0aa-4ab1-ab51-5bb22b63ccf8/logo.png?v=1733408909139" alt="Kamish Bot"class="absolute inset-0 m-auto object-contain" id="hero-bot-image">
+            <img src="./files/CND/Icon.png" alt="Kamish Bot"class="absolute inset-0 m-auto object-contain" id="hero-bot-image">
           </div>
         </div>
       </div>
     </div></div>
   </main></div>
+
+  <div id="headerll">
+    <h1 class="text-4xl md:text-4xl font-bold mb-6">
+      <span class="from-white">Kamish Team</span>
+    </h1>
+  </div>
+  
+  <div id="team-container" class="slick-carousel">
+    <div class="team-member">
+      <div class="avatar-container"><img class="avatar" src="https://cdn.discordapp.com/avatars/1016191394886455306/ce7419735c7e8f36f9c0453fb013649d.png" alt="Avatar"></div>
+      <h2 class="nickname">Kash</h2><ul class="tags"><li>Owner</li><li>Develeper</li></ul>
+    </div>
+
+    <div class="team-member">
+      <div class="avatar-container"><img class="avatar" src="https://cdn.discordapp.com/avatars/429562004399980546/4518f9db1311658e291ae93e716af819.png" alt="Avatar"></div>
+      <h2 class="nickname">Neo</h2><ul class="tags"><li>Up bot</li><li>Friend</li></ul>
+    </div>
+    
+    <div class="team-member">
+      <div class="avatar-container"><img class="avatar" src="https://cdn.discordapp.com/avatars/963318946298216479/18d5e797ceff44688a8443ddb5d015a8.png" alt="Avatar"></div>
+      <h2 class="nickname">Milka1999</h2><ul class="tags"><li>Artist</li><li>Friend</li></ul>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="footer-text">
+      Мы не являемся аффилированным лицом компании Discord Inc.
+    </div>
+  </footer>
 </body>
 </html>
