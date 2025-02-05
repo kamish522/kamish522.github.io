@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const moreInfoButton = document.getElementById('button-link-index');
+    
+  moreInfoButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.open('https://kamish.pro/', '_self');
+  });
+});
+
   document.addEventListener('DOMContentLoaded', function() {
     const moreInfoButton = document.getElementById('button-link-invite');
     moreInfoButton.addEventListener('click', function(event) {
