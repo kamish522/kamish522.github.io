@@ -1,17 +1,16 @@
-#headerll { text-align: center; margin: 20px auto; width: 90%; /* Уменьшаем ширину заголовка */ }
+#headerll { text-align: center; margin: 20px auto; width: 90%; }
 #team-container { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
 
 
-/* Медиа-запросы для адаптации под разные размеры экрана */
-@media (max-width: 768px) { /* Таблеты и телефоны */
+@media (max-width: 40px) {
     .team-member {
-        width: 100%; /* На маленьких экранах делаем одну колонку */
+        width: 20px; 
     }
 }
 
-@media (max-width: 480px) { /* Телефоны */
+@media (max-width: 480px) {
     .team-member {
-        min-width: 100%; /* На очень маленьких экранах */
+        min-width: 100%;
         padding: 15px;
     }
     .avatar-container {
