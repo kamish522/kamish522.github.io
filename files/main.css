@@ -1,8 +1,29 @@
-#headerll { text-align: center; margin: 50px auto; width: fit-content; }
-#team-container { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+#headerll { text-align: center; margin: 20px auto; width: 90%; /* Уменьшаем ширину заголовка */ }
+#team-container { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 10px; }
+
+
+/* Медиа-запросы для адаптации под разные размеры экрана */
+@media (max-width: 768px) { /* Таблеты и телефоны */
+    .team-member {
+        width: 100%; /* На маленьких экранах делаем одну колонку */
+    }
+}
+
+@media (max-width: 480px) { /* Телефоны */
+    .team-member {
+        min-width: 100%; /* На очень маленьких экранах */
+        padding: 15px;
+    }
+    .avatar-container {
+      width: 80px;
+      height: 80px;
+    }
+    .nickname { font-size: 16px; }
+    .tags li { font-size: 12px; }
+}
+
   
 .team-member {
-    width: 20%;
     min-width: 20px;
     margin: 20px;
     padding: 40px;
