@@ -5,24 +5,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <script src="https://api-maps.yandex.ru/v3/?apikey=ff4c6f9f-451d-4328-9df8-cc587f84ee73&lang=ru_RU"></script>
     <script>
-        initMap();
+        ymaps.ready(initMap);
 
-        async function initMap() {
-            await ymaps.ready;
-
-            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
-
-            const map = new YMap(
+        function initMap() {
+            const map = new ymaps.Map(
                 document.getElementById('map'),
                 {
-                    location: {
-                        center: [37.588144, 55.733842],
-                        zoom: 10
-                    }
+                    center: [37.588144, 55.733842],
+                    zoom: 10
                 }
             );
 
-            map.addChild(new YMapDefaultSchemeLayer());
+            map.controls.add('zoomControl');
+            map.controls.add('typeSelector');
+            map.controls.add('trafficControl');
         }
     </script>
   </head>
